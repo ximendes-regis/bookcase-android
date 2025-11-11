@@ -2,7 +2,7 @@ package br.com.ximendesindustries.bookcase.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import br.com.ximendesindustries.bookcase.domain.factories.BookFactory
+import br.com.ximendesindustries.bookcase.domain.usecase.GetBooksUseCase
 import br.com.ximendesindustries.bookcase.ui.home.uimodel.HomeUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import jakarta.inject.Inject
@@ -13,7 +13,9 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 @HiltViewModel
-class HomeViewModel @Inject constructor() : ViewModel() {
+class HomeViewModel @Inject constructor(
+    private val getBooksUseCase: GetBooksUseCase
+) : ViewModel() {
 
     private val _uiState = MutableStateFlow(HomeUiState())
     val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
@@ -24,11 +26,13 @@ class HomeViewModel @Inject constructor() : ViewModel() {
 
     private fun getBooks() {
         viewModelScope.launch {
-            _uiState.update {
-                it.copy(
-                    books = BookFactory.sampleList(),
-                    filteredBooks = BookFactory.sampleList(),
-                )
+            getBooksUseCase().collect { books ->
+                _uiState.update {
+                    it.copy(
+                        books = books,
+                        filteredBooks = books,
+                    )
+                }
             }
         }
     }

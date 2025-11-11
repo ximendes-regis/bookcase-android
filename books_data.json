@@ -1,0 +1,72 @@
+[
+  {
+    "title": "O Almanaque de Naval Ravikant",
+    "description": "Um guia sobre riqueza e felicidade.",
+    "author": "Eric Jorgenson",
+    "imageUrl": "https://via.placeholder.com/150",
+    "categories": ["BUSINESS"]
+  },
+  {
+    "title": "Sapiens",
+    "description": "Uma breve história da humanidade.",
+    "author": "Yuval Noah Harari",
+    "imageUrl": "https://via.placeholder.com/150",
+    "categories": ["BUSINESS"]
+  },
+  {
+    "title": "O Poder do Hábito",
+    "description": "Por que fazemos o que fazemos na vida e nos negócios.",
+    "author": "Charles Duhigg",
+    "imageUrl": "https://via.placeholder.com/150",
+    "categories": ["SELF_HELP"]
+  },
+  {
+    "title": "A Guerra da Arte",
+    "description": "Estratégias para vencer a resistência interna e liberar seu potencial criativo.",
+    "author": "Steven Pressfield",
+    "imageUrl": "https://via.placeholder.com/150",
+    "categories": ["CREATIVITY"]
+  },
+  {
+    "title": "Mindset: A Nova Psicologia do Sucesso",
+    "description": "Como podemos aprender a cumprir nosso potencial.",
+    "author": "Carol S. Dweck",
+    "imageUrl": "https://via.placeholder.com/150",
+    "categories": ["PSYCHOLOGY"]
+  },
+  {
+    "title": "A Arte da Guerra",
+    "description": "Um clássico sobre estratégia e liderança.",
+    "author": "Sun Tzu",
+    "imageUrl": "https://via.placeholder.com/150",
+    "categories": ["STRATEGY"]
+  },
+  {
+    "title": "O Homem Mais Rico da Babilônia",
+    "description": "Lições de finanças pessoais baseadas em parábolas antigas.",
+    "author": "George S. Clason",
+    "imageUrl": "https://via.placeholder.com/150",
+    "categories": ["FINANCE"]
+  },
+  {
+    "title": "Antifrágil",
+    "description": "Coisas que se beneficiam com o caos.",
+    "author": "Nassim Nicholas Taleb",
+    "imageUrl": "https://via.placeholder.com/150",
+    "categories": ["PHILOSOPHY"]
+  },
+  {
+    "title": "Os Segredos da Mente Milionária",
+    "description": "Aprenda a dominar o jogo interior da riqueza.",
+    "author": "T. Harv Eker",
+    "imageUrl": "https://via.placeholder.com/150",
+    "categories": ["BUSINESS", "FINANCE"]
+  },
+  {
+    "title": "Meditações",
+    "description": "Reflexões sobre a vida, a virtude e o autodomínio.",
+    "author": "Marco Aurélio",
+    "imageUrl": "https://via.placeholder.com/150",
+    "categories": ["PHILOSOPHY"]
+  }
+]
