@@ -1,4 +1,4 @@
-package br.com.estante
+package br.com.ximendesindustries.bookcase
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

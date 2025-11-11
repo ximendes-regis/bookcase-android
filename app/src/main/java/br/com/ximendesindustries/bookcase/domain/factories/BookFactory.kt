@@ -1,7 +1,7 @@
-package br.com.estante.domain.model.modelfactory
+package br.com.ximendesindustries.bookcase.domain.factories
 
-import br.com.estante.domain.model.Book
-import br.com.estante.domain.model.Category
+import br.com.ximendesindustries.bookcase.domain.model.Book
+import br.com.ximendesindustries.bookcase.domain.model.Category
 
 object BookFactory {
 
@@ -9,9 +9,10 @@ object BookFactory {
         title: String = "Título padrão",
         description: String = "Descrição do livro.",
         author: String = "Autor desconhecido",
+        imageUrl: String = "https://via.placeholder.com/150",
         categories: List<Category> = emptyList()
     ): Book {
-        return Book(title, description, author, categories)
+        return Book(title, description, author, imageUrl, categories)
     }
 
     fun sampleList(): List<Book> = listOf(

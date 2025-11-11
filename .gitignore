@@ -13,3 +13,85 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Build
+/build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Gradle
+.gradle/
+.gradle-cache/
+gradle-app.setting
+gradle.properties
+
+# Android Studio
+.idea/
+*.ipr
+*.iws
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/dictionaries
+.idea/**/libraries
+.idea/caches/
+.idea/modules.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Logs
+*.log
+
+# Android specific
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
+*.aab
+*.aar
+
+# Keystore files
+*.jks
+*.keystore
+*.pem
+*.key
+
+# NDK
+obj/
+*.so
+
+# IntelliJ
+out/
+
+# Misc
+Thumbs.db
+
+# Generated files
+bin/
+gen/
+debug/
+release/
+
+# Firebase / Google Services
+google-services.json
+app/google-services.json
+
+# Jetpack Compose preview cache
+compose-cache/
+
+# Gradle build cache
+build/
+
+# Lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+
+# Kotlin
+*.kotlin_metadata
+*.kotlin_module
+
+# Android Studio Profiling
+*.hprof
+
