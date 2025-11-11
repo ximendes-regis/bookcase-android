@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt)
     id("kotlin-kapt")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -63,4 +64,16 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
+
+    // --- Retrofit / OkHttp ---
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.moshi)
+    implementation(libs.moshi)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.15.0")
+
+    // --- Coroutines ---
+    implementation(libs.coroutines.core)
+    implementation(libs.coroutines.android)
 }

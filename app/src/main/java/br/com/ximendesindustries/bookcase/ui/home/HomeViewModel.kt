@@ -1,7 +1,9 @@
 package br.com.ximendesindustries.bookcase.ui.home
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import br.com.ximendesindustries.bookcase.core.util.Result
 import br.com.ximendesindustries.bookcase.domain.usecase.GetBooksUseCase
 import br.com.ximendesindustries.bookcase.ui.home.uimodel.HomeUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -26,12 +28,16 @@ class HomeViewModel @Inject constructor(
 
     private fun getBooks() {
         viewModelScope.launch {
-            getBooksUseCase().collect { books ->
-                _uiState.update {
-                    it.copy(
-                        books = books,
-                        filteredBooks = books,
-                    )
+            getBooksUseCase().collect { result ->
+                if (result is Result.Success) {
+                    _uiState.update {
+                        it.copy(
+                            books = result.data,
+                            filteredBooks = result.data,
+                        )
+                    }
+                } else {
+                    Log.e("HomeViewModel", "Error getting books")
                 }
             }
         }
