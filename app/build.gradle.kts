@@ -71,7 +71,10 @@ dependencies {
     implementation(libs.moshi)
     implementation(libs.okhttp)
     implementation(libs.okhttp.logging)
-    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.15.0")
+    ksp(libs.moshi.kotlin.codegen)
+    testImplementation(libs.mockk)
+    testImplementation(libs.kotlinx.coroutines.test)
+
 
     // --- Coroutines ---
     implementation(libs.coroutines.core)
