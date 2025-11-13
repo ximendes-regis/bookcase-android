@@ -24,7 +24,8 @@ import br.com.ximendesindustries.bookcase.domain.model.Book
 fun HomeScreenDefaultUI(
     modifier: Modifier,
     onSearchBook: (query: String) -> Unit,
-    books: List<Book> = emptyList()
+    books: List<Book> = emptyList(),
+    onBookClick: (book: Book) -> Unit
 ) {
     var text by remember { mutableStateOf("") }
 
@@ -54,6 +55,6 @@ fun HomeScreenDefaultUI(
             )
         )
         Spacer(modifier = Modifier.height(height = 24.dp))
-        HomeBooksList(books = books)
+        HomeBooksList(books = books) { book -> onBookClick(book) }
     }
 }

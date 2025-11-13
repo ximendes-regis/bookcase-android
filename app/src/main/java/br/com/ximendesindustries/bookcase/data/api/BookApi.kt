@@ -5,7 +5,7 @@ import retrofit2.http.GET
 
 interface BookApi {
 
-    @GET("base-home/books_data.json")
+    @GET("main/books_data.json")
     suspend fun getBooks(): List<BookResponse>
 
 }

@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import br.com.ximendesindustries.bookcase.core.model.RequestScreenUIState
+import br.com.ximendesindustries.bookcase.domain.model.Book
 import br.com.ximendesindustries.bookcase.ui.home.components.HomeScreenDefaultUI
 import br.com.ximendesindustries.bookcase.ui.home.components.HomeScreenErrorUI
 import br.com.ximendesindustries.bookcase.ui.home.components.HomeScreenLoadingUI
@@ -15,6 +16,7 @@ import br.com.ximendesindustries.bookcase.ui.home.model.HomeViewModelAction
 @Composable
 fun HomeScreen(
     modifier: Modifier,
+    onBookClick: (book: Book) -> Unit
 ) {
     val viewModel: HomeViewModel = hiltViewModel<HomeViewModel>()
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
@@ -30,6 +32,9 @@ fun HomeScreen(
             books = uiState.books,
             onSearchBook = {
                 viewModel.performAction(HomeViewModelAction.SearchBook(it))
+            },
+            onBookClick = { book ->
+                onBookClick(book)
             }
         )
 

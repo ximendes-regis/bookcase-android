@@ -30,7 +30,7 @@ object NetworkModule {
     @Singleton
     fun provideRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://raw.githubusercontent.com/ximendes-regis/bookcase-android/refs/heads/feat/")
+            .baseUrl("https://raw.githubusercontent.com/ximendes-regis/bookcase-android/refs/heads/")
             .client(client)
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
